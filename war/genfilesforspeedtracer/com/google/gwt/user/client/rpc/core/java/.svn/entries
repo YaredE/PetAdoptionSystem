@@ -1,30 +1,0 @@
-8
-
-dir
-0
-http://svn.gps.stthomas.edu/seis771/DEV/Team2/PetAdoptionSystemV0.2/war/genfilesforspeedtracer/com/google/gwt/user/client/rpc/core/java
-http://svn.gps.stthomas.edu/seis771
-add
-
-
-
-
-
-
-
-svn:special svn:externals svn:needs-lock
-
-lang
-dir
-
-
-
-add
-
-util
-dir
-
-
-
-add
-
