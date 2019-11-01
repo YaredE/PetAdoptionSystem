@@ -1,0 +1,55 @@
+8
+
+dir
+2327
+http://svn.gps.stthomas.edu/seis771/DEV/Team2/PetAdoptionSystemV0.2/src/edu/stthomas/seis771/team2
+http://svn.gps.stthomas.edu/seis771
+
+
+
+2015-04-30T19:30:24.511370Z
+2322
+Amen1601
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+bc334641-8a47-4b95-92d4-2c609d37ffd5
+
+PetAdoptionSystemV0_2.gwt.xml
+file
+2439
+
+
+
+2015-05-18T22:38:57.988561Z
+0254958eaa6c083c5e8a54e2e05de278
+2015-05-18T23:18:32.548310Z
+2439
+ykestifanas
+
+server
+dir
+
+shared
+dir
+
+dataaccesslayer
+dir
+
+domainmodel
+dir
+
+client
+dir
+

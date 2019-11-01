@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/seis771/!svn/ver/2321/DEV/Team2/PetAdoptionSystemV0.2/src/edu/stthomas/seis771/team2/dataaccesslayer
+END
+TransactionHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/seis771/!svn/ver/2436/DEV/Team2/PetAdoptionSystemV0.2/src/edu/stthomas/seis771/team2/dataaccesslayer/TransactionHandler.java
+END
+PersistDataChainHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/seis771/!svn/ver/2313/DEV/Team2/PetAdoptionSystemV0.2/src/edu/stthomas/seis771/team2/dataaccesslayer/PersistDataChainHandler.java
+END
+UserDataHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/seis771/!svn/ver/2421/DEV/Team2/PetAdoptionSystemV0.2/src/edu/stthomas/seis771/team2/dataaccesslayer/UserDataHandler.java
+END
+GenericDataChainHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/seis771/!svn/ver/2313/DEV/Team2/PetAdoptionSystemV0.2/src/edu/stthomas/seis771/team2/dataaccesslayer/GenericDataChainHandler.java
+END
+ConnectionManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/seis771/!svn/ver/2313/DEV/Team2/PetAdoptionSystemV0.2/src/edu/stthomas/seis771/team2/dataaccesslayer/ConnectionManager.java
+END
+AddressDataHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/seis771/!svn/ver/2313/DEV/Team2/PetAdoptionSystemV0.2/src/edu/stthomas/seis771/team2/dataaccesslayer/AddressDataHandler.java
+END
+PersonDataHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/seis771/!svn/ver/2313/DEV/Team2/PetAdoptionSystemV0.2/src/edu/stthomas/seis771/team2/dataaccesslayer/PersonDataHandler.java
+END

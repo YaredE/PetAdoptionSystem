@@ -1,0 +1,83 @@
+8
+
+dir
+2327
+http://svn.gps.stthomas.edu/seis771/DEV/Team2/PetAdoptionSystemV0.2
+http://svn.gps.stthomas.edu/seis771
+
+
+
+2015-04-30T19:30:24.511370Z
+2322
+Amen1601
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+bc334641-8a47-4b95-92d4-2c609d37ffd5
+
+test
+dir
+
+.classpath
+file
+
+
+
+
+2015-04-27T05:13:41.459873Z
+bb72279a0a89afa964afedbce084ceb1
+2015-04-28T00:17:00.681646Z
+2313
+ykestifanas
+
+gwt-unitCache
+dir
+
+.project
+file
+
+
+
+
+2015-04-27T05:13:41.284871Z
+ec42e4bbb90dfee954b487a3da4f9038
+2015-04-28T00:17:00.681646Z
+2313
+ykestifanas
+
+src
+dir
+
+war
+dir
+
+PetAdoptionSystemV0.2.war
+file
+
+
+
+
+2015-05-04T22:54:20.329186Z
+6ecab2436c4ad49d1fcaa249f042e85e
+2015-04-29T00:07:22.805239Z
+2319
+Amen1601
+has-props
+
+.settings
+dir
+
+checkstyle
+dir
+

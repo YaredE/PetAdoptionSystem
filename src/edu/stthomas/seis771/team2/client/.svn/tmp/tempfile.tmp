@@ -1,0 +1,301 @@
+package edu.stthomas.seis771.team2.client;
+
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.dom.client.KeyUpEvent;
+import com.google.gwt.event.dom.client.KeyUpHandler;
+import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.PasswordTextBox;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.VerticalPanel;
+
+import edu.stthomas.seis771.team2.client.service.PetAdoptionOrganizationServiceAsync;
+
+public class AdoptionRequestPage extends Composite {
+    /**
+     * The Request button.
+     */
+    private Button request;
+
+    /**
+     * The Adoption ID.
+     */
+    private TextBox adoptionIDField;
+
+    /**
+     * The Status field.
+     */
+    private TextBox statusField;
+
+    /**
+     * The user name field.
+     */
+    private TextBox unameField;
+
+    /**
+     * The password field.
+     */
+    private PasswordTextBox passwordField;
+
+    /**
+     * The date submitted.
+     */
+    private TextBox dateField;
+
+    /**
+     * The animal ID.
+     */
+    private TextBox animalIDField;
+
+    /**
+     * The animal breed
+     */
+    private TextBox breedField;
+    /**
+     * The animal gender.
+     */
+    private TextBox genderField;
+
+    /**
+     * The animal age.
+     */
+    private TextBox ageField;
+
+    /**
+     * The animal size.
+     */
+    private TextBox sizeField;
+
+    /**
+     * The animal color.
+     */
+    private TextBox colorField;
+
+    /**
+     * The vertical panel for the whole thing(the main stuff).
+     */
+    private VerticalPanel vPanel;
+
+    /**
+     * <p>
+     * The result from actually trying to register from the server.
+     * </p>
+     */
+    private Label adoptionFromServer;
+
+    /**
+     * This is for invoking PetAdoptionOrganizationServiceAsync.
+     */
+    private PetAdoptionOrganizationServiceAsync paoService;
+
+    public AdoptionRequestPage(PetAdoptionOrganizationServiceAsync paoService) {
+        this.paoService = paoService;
+        vPanel = new VerticalPanel();
+        initWidget(vPanel);
+
+        adoptionIDField = new TextBox();
+        statusField = new TextBox();
+        unameField = new TextBox();
+        passwordField = new PasswordTextBox();
+        dateField = new TextBox();
+        animalIDField = new TextBox();
+        breedField = new TextBox();
+        genderField = new TextBox();
+        ageField = new TextBox();
+        sizeField = new TextBox();
+        colorField = new TextBox();
+
+        request = new Button("Request");
+        request.addClickHandler(new AdoptionHandler());
+
+        vPanel.add(new Label("Adoption ID:"));
+        vPanel.add(adoptionIDField);
+        vPanel.add(new Label("Status:"));
+        vPanel.add(statusField);
+        vPanel.add(new Label("User Name:"));
+        vPanel.add(unameField);
+        vPanel.add(new Label("Password:"));
+        vPanel.add(passwordField);
+        vPanel.add(new Label("Date:"));
+        vPanel.add(dateField);
+        vPanel.add(new Label("Animal ID:"));
+        vPanel.add(animalIDField);
+        vPanel.add(new Label("Breed:"));
+        vPanel.add(breedField);
+        vPanel.add(new Label("Gender:"));
+        vPanel.add(genderField);
+        vPanel.add(new Label("Age:"));
+        vPanel.add(ageField);
+        vPanel.add(new Label("Size:"));
+        vPanel.add(sizeField);
+        vPanel.add(new Label("Color:"));
+        vPanel.add(colorField);
+
+        adoptionFromServer = new Label("       ");
+
+        vPanel.add(adoptionFromServer);
+
+        vPanel.add(request);
+
+    }
+
+    public TextBox getStatusField() {
+        return statusField;
+    }
+
+    public void setStatusField(TextBox statusField) {
+        this.statusField = statusField;
+    }
+
+    public TextBox getUnameField() {
+        return unameField;
+    }
+
+    public void setUnameField(TextBox unameField) {
+        this.unameField = unameField;
+    }
+
+    public PasswordTextBox getPasswordField() {
+        return passwordField;
+    }
+
+    public void setPasswordField(PasswordTextBox passwordField) {
+        this.passwordField = passwordField;
+    }
+
+    public TextBox getDateField() {
+        return dateField;
+    }
+
+    public void setDateField(TextBox dateField) {
+        this.dateField = dateField;
+    }
+
+    public TextBox getAnimalIDField() {
+        return animalIDField;
+    }
+
+    public void setAnimalIDField(TextBox animalIDField) {
+        this.animalIDField = animalIDField;
+    }
+
+    public TextBox getBreedField() {
+        return breedField;
+    }
+
+    public void setBreedField(TextBox breedField) {
+        this.breedField = breedField;
+    }
+
+    public TextBox getGenderField() {
+        return genderField;
+    }
+
+    public void setGenderField(TextBox genderField) {
+        this.genderField = genderField;
+    }
+
+    public TextBox getAgeField() {
+        return ageField;
+    }
+
+    public void setAgeField(TextBox ageField) {
+        this.ageField = ageField;
+    }
+
+    public TextBox getSizeField() {
+        return sizeField;
+    }
+
+    public void setSizeField(TextBox sizeField) {
+        this.sizeField = sizeField;
+    }
+
+    public TextBox getColorField() {
+        return colorField;
+    }
+
+    public void setColorField(TextBox colorField) {
+        this.colorField = colorField;
+    }
+
+    public TextBox getAdoptionIDField() {
+        return adoptionIDField;
+    }
+
+    public void setAdoptionIDField(TextBox adoptionIDField) {
+        this.adoptionIDField = adoptionIDField;
+    }
+
+    class AdoptionHandler implements ClickHandler, KeyUpHandler {
+
+        /**
+         * Fired when the user clicks on the sendButton.
+         */
+        public void onClick(ClickEvent event) {
+            {
+                collectDataAndSendToServer();
+            }
+        }
+
+        /**
+         * Fired when the user types in the nameField.
+         */
+        public void onKeyUp(KeyUpEvent event) {
+            {
+                collectDataAndSendToServer();
+            }
+        }
+    }
+
+    public void collectDataAndSendToServer() {
+        String status = this.getStatusField().getText();
+        ;
+        String adoptionid = this.getAdoptionIDField().getText();
+        ;
+        String date = this.getDateField().getText();
+        ;
+        String animalid = this.getAnimalIDField().getText();
+        ;
+        String breed = this.getBreedField().getText();
+        ;
+        String gender = this.getGenderField().getText();
+        ;
+        String age = this.getAgeField().getText();
+        ;
+        String size = this.getSizeField().getText();
+        ;
+        String color = this.getColorField().getText();
+        ;
+        String userName = this.getUnameField().getText();
+        ;
+        String password = this.getPasswordField().getText();
+        ;
+        this.paoService.request(status, adoptionid, date, animalid, breed,
+                gender, age, size, color, userName, password,
+                new AdoptionCallBackHandler());
+    }
+
+    /**
+     * <p>
+     * Handle what is going to happen onSuccess and OnFailure.
+     * </p>
+     *
+     * @author user
+     *
+     */
+    private class AdoptionCallBackHandler implements AsyncCallback<String> {
+
+        public void onFailure(Throwable caught) {
+            adoptionFromServer.setText(caught.toString());
+        }
+
+        public void onSuccess(String result) {
+            adoptionFromServer.setText(result);
+        }
+    }
+
+}

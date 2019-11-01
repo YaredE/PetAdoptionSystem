@@ -1,0 +1,3 @@
+# Module petadoptionsystemv0_2
+# RPC service class, partial path of RPC policy file
+edu.stthomas.seis771.team2.client.service.PetAdoptionOrganizationService, C9AD8763CB9AEA3281265185F89C40FC.gwt.rpc
